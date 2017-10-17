@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teamsix.samvid.Login"
+    android:background="#346388">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"android:textSize="24sp"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="32dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="144dp"
+        android:hint="Password"
+        android:textColorHint="#BBCBD7"
+        app:backgroundTint="#BBCBD7"
+        />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteY="89dp"
+        tools:layout_editor_absoluteX="29dp"
+        android:hint="Username"
+        android:textColorHint="#BBCBD7"
+        app:backgroundTint="#BBCBD7"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an
+account?"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="297dp"
+        android:textColor="#ffffff"
+        android:textSize="19sp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="352dp"
+        android:background="#346388"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="203dp"
+        android:background="#346388"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Skip for now [/]"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        tools:layout_editor_absoluteX="29dp"
+        android:background="#346388"
+        tools:layout_editor_absoluteY="436dp" />
+
+</android.support.constraint.ConstraintLayout>
