@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/abovegroup">
+        <item
+            android:id="@+id/nav_menu1"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Events"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_menu2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Map" />
+        <item
+            android:id="@+id/nav_menu3"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Calender" />
+
+    </group>
+
+    <group android:checkableBehavior="none"
+        android:id="@+id/belowgroup">
+            <item
+                android:id="@+id/nav_menu4"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_menu5"
+                android:icon="@mipmap/ic_launcher"
+                android:title="About App" />
+            <item
+                android:id="@+id/nav_menu6"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Log Out" />
+
+    </group>
+</menu>

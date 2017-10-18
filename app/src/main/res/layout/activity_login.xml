@@ -31,7 +31,8 @@
         android:textColor="#ffffff"
         android:textCursorDrawable="@drawable/logincursor"
         android:typeface="monospace"
-        app:backgroundTint="#ffffff"/>
+        app:backgroundTint="#ffffff"
+        android:textColorHighlight="#55ffffff"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -46,7 +47,8 @@
         android:textColorHint="#ECEFF1"
         android:textColor="#ffffff"
         android:textCursorDrawable="@drawable/logincursor"
-        app:backgroundTint="#ffffff"/>
+        app:backgroundTint="#ffffff"
+        android:textColorHighlight="#55ffffff"/>
 
     <Button
         android:id="@+id/button"
