@@ -1,6 +1,7 @@
 package com.teamsix.samvid;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -18,10 +19,14 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    AppBarLayout appBarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        appBarLayout=(AppBarLayout)findViewById(R.id.appBarLayout);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Events");
@@ -66,9 +71,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity
 
         //creating fragment object
         Fragment fragment = null;
+        appBarLayout.setElevation(0);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         //initializing the fragment object which is selected
@@ -106,14 +112,17 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_menu1:
                 fragment = new FragmentEvents();
                 toolbar.setTitle("Events");
+                appBarLayout.setElevation(0);
                 break;
             case R.id.nav_menu2:
                 fragment = new FragmentMap();
                 toolbar.setTitle("Maps");
+                appBarLayout.setElevation(12);
                 break;
             case R.id.nav_menu3:
                 fragment = new FragmentCalender();
                 toolbar.setTitle("Calender");
+                appBarLayout.setElevation(12);
                 break;
         }
 
@@ -127,4 +136,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
+
 }
