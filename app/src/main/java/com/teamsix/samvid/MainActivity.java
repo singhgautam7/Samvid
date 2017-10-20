@@ -1,10 +1,13 @@
 package com.teamsix.samvid;
 
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -16,8 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     AppBarLayout appBarLayout;
 
@@ -32,7 +34,6 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("Events");
         setSupportActionBar(toolbar);
 
-        //can use snackbar too
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView=(NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         displaySelectedScreen(R.id.nav_menu1);
@@ -122,6 +123,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_menu3:
                 fragment = new FragmentCalender();
                 toolbar.setTitle("Calender");
+                appBarLayout.setElevation(12);
+                break;
+            case R.id.nav_menu7:
+                fragment = new FragmentOrganizeEvent();
+                toolbar.setTitle("Organize Event");
                 appBarLayout.setElevation(12);
                 break;
         }
