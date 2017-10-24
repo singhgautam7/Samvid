@@ -29,7 +29,7 @@ public class FragmentEvents extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_events, container, false);
+        final  View view=inflater.inflate(R.layout.fragment_events, container, false);
 
         View bottomSheet = view.findViewById(R.id.bottom_sheet);
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
@@ -38,6 +38,14 @@ public class FragmentEvents extends Fragment {
         mBottomSheetBehavior.setPeekHeight(0);
 
         final FloatingActionButton fab=(FloatingActionButton)view.findViewById(R.id.fab);
+        fab.setVisibility(View.VISIBLE);
+
+        view.post(new Runnable() {
+            @Override
+            public void run() {
+                view.requestLayout();
+            }
+        });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,5 +134,15 @@ public class FragmentEvents extends Fragment {
                     fab.startAnimation(expand);
                     break;
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }
