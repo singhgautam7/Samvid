@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_filter_list_black"
+        android:src="@drawable/ic_filter_list_white"
         android:backgroundTint="@color/colorAccent"
         android:visibility="gone"/>
 
