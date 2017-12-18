@@ -16,11 +16,6 @@
             android:id="@+id/nav_menu3"
             android:icon="@drawable/ic_calender_black"
             android:title="Calender" />
-        <item
-            android:id="@+id/nav_menu7"
-            android:icon="@drawable/ic_library_add"
-            android:title="Organize an Event" />
-
     </group>
 
     <group android:checkableBehavior="none"

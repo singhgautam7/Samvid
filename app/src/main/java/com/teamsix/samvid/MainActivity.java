@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -105,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //creating fragment object
         Fragment fragment = null;
-        appBarLayout.setElevation(0);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         //initializing the fragment object which is selected
@@ -113,22 +111,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_menu1:
                 fragment = new FragmentEvents();
                 toolbar.setTitle("Events");
-                appBarLayout.setElevation(0);
                 break;
             case R.id.nav_menu2:
                 fragment = new FragmentMap();
                 toolbar.setTitle("Maps");
-                appBarLayout.setElevation(12);
                 break;
             case R.id.nav_menu3:
                 fragment = new FragmentCalender();
                 toolbar.setTitle("Calender");
-                appBarLayout.setElevation(12);
-                break;
-            case R.id.nav_menu7:
-                fragment = new FragmentOrganizeEvent();
-                toolbar.setTitle("Organize Event");
-                appBarLayout.setElevation(12);
                 break;
         }
 

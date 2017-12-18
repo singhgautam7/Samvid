@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_item1"
+        android:icon="@drawable/ic_all_events"
+        android:title="All"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_item2"
+        android:icon="@drawable/ic_star"
+        android:title="Starred"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_item3"
+        android:icon="@drawable/ic_library_add"
+        android:title="Organize"
+        app:showAsAction="ifRoom"/>
+</menu>

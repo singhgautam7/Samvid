@@ -1,6 +1,6 @@
 <resources>
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
-        <item name="color">#FF21437a</item>
+        <item name="color">#ffffffff</item>
     </style>
 
     <!-- Base application theme. -->
@@ -10,6 +10,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:textColorHighlightInverse">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
     </style>
 
     <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">

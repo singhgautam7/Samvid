@@ -35,6 +35,6 @@
         android:layout_height="wrap_content"
         android:text="Username"
         android:layout_marginTop="5dp"
-        android:textColor="#eeeeee"
+        android:textColor="#ffffff"
         android:textSize="14dp"/>
 </LinearLayout>
