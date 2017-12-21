@@ -41,104 +41,13 @@ public class FragmentEvents extends Fragment {
         mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         mBottomSheetBehavior.setPeekHeight(0);*/
 
-        /*view.post(new Runnable() {
-            @Override
-            public void run() {
-                view.requestLayout();
-            }
-        }); */        //to proprly anchor main FAB everytime when the control returns to this fragment
-
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) view.findViewById(R.id.bottom_navigation);
-
         setupNavigationView(view);
 
         return view;
     }
 
-    /*void animateFab(int position,final FloatingActionButton fab) {
-        fab.clearAnimation();
-        ScaleAnimation shrink =  new ScaleAnimation(1f, 0, 1f, 0, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        shrink.setDuration(125);
-        ScaleAnimation expand =  new ScaleAnimation(0, 1f, 0, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        expand.setDuration(125);
-
-        switch (position) {
-            case 0:
-                fab.setVisibility(View.VISIBLE);
-                fab.startAnimation(expand);
-                break;
-            case 1:
-                fab.startAnimation(shrink);
-                final Handler mHandler=new Handler();
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        fab.setVisibility(View.INVISIBLE);
-                        fab.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
-                        fab.setImageResource(R.drawable.ic_filter_list_white);
-                    }
-                },125);
-                if (mBottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {        //bottom sheet expanded condition used slightly differnetly
-                    mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                    smallFABvisibility("HIDE");
-                }
-                break;
-            default:
-                fab.setVisibility(View.VISIBLE);
-                fab.startAnimation(expand);
-                break;
-        }
-    }
-
-    void changeFABdesign(final int color ,final int icon )
-    {
-        final FloatingActionButton fab=(FloatingActionButton)getView().findViewById(R.id.fab);
-        fab.clearAnimation();
-        final ScaleAnimation shrink =  new ScaleAnimation(1f, 0.2f, 1f, 0.2f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        shrink.setDuration(125);
-        final ScaleAnimation expand =  new ScaleAnimation(0.2f, 1f, 0.2f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        expand.setDuration(125);
-        final Handler mHandler = new Handler();
-
-        fab.startAnimation(shrink);
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                fab.setBackgroundTintList(ColorStateList.valueOf(color));
-                fab.setImageResource(icon);
-                fab.startAnimation(expand);
-            }
-        },125);
-
-    }
-
-    void smallFABvisibility(String str)
-    {
-        final FloatingActionButton smallfab=(FloatingActionButton)getView().findViewById(R.id.smallfab);
-        smallfab.clearAnimation();
-        final ScaleAnimation shrink =  new ScaleAnimation(1f, 0.2f, 1f, 0.2f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        shrink.setDuration(250);
-        final ScaleAnimation expand =  new ScaleAnimation(0.2f, 1f, 0.2f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        expand.setDuration(250);
-        final Handler mHandler = new Handler();
-
-        if (str.equals("SHOW")) {
-            smallfab.setVisibility(View.INVISIBLE);
-            smallfab.startAnimation(expand);
-            smallfab.setVisibility(View.VISIBLE);
-        }
-
-        else if (str.equals("HIDE")) {
-            smallfab.startAnimation(shrink);
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    smallfab.setVisibility(View.GONE);
-                }
-            },250);
-        }
-    }*/
 
     private void setupNavigationView(View view) {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) view.findViewById(R.id.bottom_navigation);
